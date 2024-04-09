@@ -30,6 +30,7 @@ public class Control {
     }
 
     private void addNote(LocalDate date) {
+        System.out.println("Opisz swój dzisiejszy dzień:");
         String content = scanner.nextLine();
         notes.put(date, content);
     }
