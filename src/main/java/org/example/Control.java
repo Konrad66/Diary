@@ -18,21 +18,27 @@ public class Control {
     }
 
     void doMenu(){
-        printMenu();
-        String choice = scanner.nextLine();
-        switch (choice){
-            case "1" -> addNote(LocalDate.now(), "hej");
-            case "2" -> printNote(LocalDate.now());
-            default -> System.out.println("Zły wybór, spróbuj jeszcze raz");
+        while (true) {
+            printMenu();
+            String choice = scanner.nextLine();
+            switch (choice) {
+                case "1" -> addNote(LocalDate.now());
+                case "2" -> printNote();
+                default -> System.out.println("Zły wybór, spróbuj jeszcze raz");
+            }
         }
     }
 
 
-    private void addNote(LocalDate date, String content) {
+
+
+    private void addNote(LocalDate date) {
+        String content = scanner.nextLine();
         notes.put(date, content);
     }
 
-    private String printNote(LocalDate date){
-        return notes.get(date);
+    private String printNote(){
+
+        return null;
     }
 }
