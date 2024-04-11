@@ -23,7 +23,7 @@ public class Control {
             String choice = scanner.nextLine();
             switch (choice) {
                 case "1" -> addNote(LocalDate.now());
-                case "2" -> printNote(LocalDate.now());
+                case "2" -> printNote();
                 default -> System.out.println("Zły wybór, spróbuj jeszcze raz");
             }
         }
@@ -39,10 +39,10 @@ public class Control {
         return notes.get(date);
     }
 
-    private String printNote(LocalDate date){
+    private String printNote(){
         System.out.println("Wpisz datę z jakiego dnia chciałbyś zobaczyć wpis: (RRRR-MM-DD)");
         String dataString = scanner.nextLine();
-        date = LocalDate.parse(dataString);
+        LocalDate date = LocalDate.parse(dataString);
         String showNote = priintNote(date);
         if (showNote != null){
             System.out.println("Wpis z dnia " + date + " :");
@@ -53,3 +53,11 @@ public class Control {
         return null;
     }
 }
+
+
+// dodać zmienną liczacą linie kodu
+// dodać zmienną ile czasu spędziłem na programowaniu
+// zapis do pliku
+// program sam mi liczy ile czasu spędziłem na sesji
+// statystyki - podlicza ile było w każdym tygodniu
+// ile łącznie dni programowałem - statystyka
