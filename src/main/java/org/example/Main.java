@@ -1,11 +1,9 @@
 package org.example;
 
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
 
-        Control control = new Control();
-        control.doMenu();
+        MainControl mainControl = new MainControl();
+        mainControl.doMenu();
     }
 }
