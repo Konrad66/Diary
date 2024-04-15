@@ -11,14 +11,13 @@ public class MainControl {
     NoteService noteService = new NoteService();
 
 
-
     private void printMenu() {
         System.out.println("Witaj w swoim dzienniku. Wybierz z opcji poniżej:");
         System.out.println("1. Opisz swój dzisiejszy dzień:");
         System.out.println("2. Zobacz co się u ciebie działo w poprzednich dniach");
     }
 
-    void doMenu(){
+    void doMenu() {
         while (true) {
             printMenu();
             String choice = scanner.nextLine();
@@ -29,8 +28,6 @@ public class MainControl {
             }
         }
     }
-
-
 
 
 }
