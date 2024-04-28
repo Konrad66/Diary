@@ -9,6 +9,8 @@ public class NoteService {
     Scanner scanner = new Scanner(System.in);
     private Map<LocalDate, String> notes = new HashMap<>();
 
+    int liesOFCode;
+
     void addNote(LocalDate date) {
         System.out.println("Opisz swój dzisiejszy dzień:");
         String content = scanner.nextLine();
