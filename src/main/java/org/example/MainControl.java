@@ -22,7 +22,7 @@ public class MainControl {
             printMenu();
             String choice = scanner.nextLine();
             switch (choice) {
-                case "1" -> noteService.addNote(LocalDate.now());
+                case "1" -> noteService.addNote();
                 case "2" -> noteService.printNote();
                 default -> System.out.println("Zły wybór, spróbuj jeszcze raz");
             }
